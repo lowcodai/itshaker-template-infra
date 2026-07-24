@@ -1,0 +1,7 @@
+---
+# site.yml — Playbook principal
+# Usage: ansible-playbook -i inventory/hosts.yml playbooks/site.yml
+- name: Main playbook
+  hosts: all
+  gather_facts: true
+  roles: []  # Ajouter les rôles ici
