@@ -2,7 +2,7 @@
 
 > Template for infrastructure, SRE, Ansible, Docker, monitoring, and CMDB projects.
 
-[![Governance](https://img.shields.io/badge/governance-itshaker-blue)](https://github.com/lowcodai/itshaker-copilot-governance)
+[![Governance](https://img.shields.io/badge/governance-lowcodai-blue)](https://github.com/lowcodai/itshaker-copilot-governance)
 
 ## Description
 
