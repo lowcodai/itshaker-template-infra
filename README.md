@@ -53,7 +53,7 @@ cd itshaker-bootstrap
 | `attester-import-check` | Hook | Checks imports |
 | `agent-supply-chain` | Skill | Supply chain analysis |
 
-See [governance hooks registry](https://github.com/lowcodai/itshaker-copilot-governance/blob/main/docs/awesome-copilot-map.md) for the full list of hooks available across the ecosystem.
+See `.github/copilot-instructions.md` for this repo's full active hooks list, and the [governance hooks registry](https://github.com/lowcodai/itshaker-copilot-governance/blob/main/docs/awesome-copilot-map.md) for the full ecosystem-wide catalog.
 
 ## References
 
