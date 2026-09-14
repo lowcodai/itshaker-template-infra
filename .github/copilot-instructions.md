@@ -21,6 +21,7 @@ This project covers: infrastructure-as-code, Ansible playbooks, Docker, monitori
 ## Hooks in use
 - `tool-guardian`, `secrets-scanner`, `governance-audit`
 - `dependency-license-checker`, `attester-import-check`
+- `fix-broken-links`
 
 ## Instructions references
 - `.github/instructions/ansible.instructions.md`
@@ -29,4 +30,4 @@ This project covers: infrastructure-as-code, Ansible playbooks, Docker, monitori
 - `.github/instructions/devops-core-principles.instructions.md`
 
 ## References
-- Governance: https://github.com/itshaker/itshaker-copilot-governance
+- Governance: https://github.com/lowcodai/itshaker-copilot-governance

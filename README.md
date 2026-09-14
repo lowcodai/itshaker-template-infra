@@ -1,57 +1,60 @@
 # itshaker-template-infra
 
-> Template pour projets infrastructure, SRE, Ansible, Docker, monitoring, CMDB.
+> Template for infrastructure, SRE, Ansible, Docker, monitoring, and CMDB projects.
 
-[![Governance](https://img.shields.io/badge/governance-itshaker-blue)](https://github.com/itshaker/itshaker-copilot-governance)
+[![Governance](https://img.shields.io/badge/governance-itshaker-blue)](https://github.com/lowcodai/itshaker-copilot-governance)
 
 ## Description
 
-Template GitHub pour projets d'infrastructure itshaker. Inclut tout ce que fournit `itshaker-template-base` plus :
-- Structure Ansible (`inventory/`, `playbooks/`, `roles/`)
-- Structure Docker
-- Monitoring (dashboards, alertes)
+GitHub template for itshaker infrastructure projects. Includes everything provided by
+`itshaker-template-base`, plus:
+- Ansible structure (`inventory/`, `playbooks/`, `roles/`)
+- Docker structure
+- Monitoring (dashboards, alerts)
 - CMDB
-- Workflows CI/CD dédiés : ansible-lint, docker-build, infrastructure-scan
+- Dedicated CI/CD workflows: ansible-lint, docker-build, infrastructure-scan
 
-## Utilisation
+## Usage
 
 ```bash
 cd itshaker-bootstrap
-./scripts/new-project.sh --type infra --name <mon-infra>
+./scripts/new-project.sh --type infra --name <my-infra>
 ```
 
-## Structure spécifique infra
+## Infra-specific structure
 
 ```
 .
 ├── ansible/
-│   ├── inventory/   # Inventaires (hosts.yml par environnement)
-│   ├── playbooks/   # Playbooks principaux
-│   └── roles/       # Rôles réutilisables
-├── docker/          # Dockerfiles et docker-compose
+│   ├── inventory/   # Inventories (hosts.yml per environment)
+│   ├── playbooks/   # Main playbooks
+│   └── roles/       # Reusable roles
+├── docker/          # Dockerfiles and docker-compose
 ├── monitoring/
-│   ├── dashboards/  # Grafana / autres dashboards (JSON)
-│   └── alerts/      # Règles d'alerte (Prometheus/Alertmanager)
+│   ├── dashboards/  # Grafana / other dashboards (JSON)
+│   └── alerts/      # Alerting rules (Prometheus/Alertmanager)
 └── cmdb/            # Configuration Management Database
 ```
 
-## Conventions Ansible
+## Ansible conventions
 
-- Chaque rôle suit la structure `tasks/`, `handlers/`, `defaults/`, `templates/`.
-- `ansible-lint` obligatoire (voir `.github/workflows/ansible-lint.yml`).
-- Les secrets sont gérés via Ansible Vault ou GitHub Secrets — jamais en clair.
-- Toutes les tâches doivent être idempotentes.
+- Each role follows the `tasks/`, `handlers/`, `defaults/`, `templates/` structure.
+- `ansible-lint` is mandatory (see `.github/workflows/ansible-lint.yml`).
+- Secrets are managed via Ansible Vault or GitHub Secrets — never in plain text.
+- All tasks must be idempotent.
 
-## Éléments Awesome Copilot spécifiques
+## Infra-specific Awesome Copilot elements
 
-| Élément | Type | Usage |
+| Element | Type | Usage |
 |---------|------|-------|
-| `ansible.instructions.md` | Instruction | Conventions Ansible |
-| `containerization-docker-best-practices.instructions.md` | Instruction | Best practices Docker |
-| `dependency-license-checker` | Hook | Vérifie les licences |
-| `attester-import-check` | Hook | Vérifie les imports |
-| `agent-supply-chain` | Skill | Analyse supply chain |
+| `ansible.instructions.md` | Instruction | Ansible conventions |
+| `containerization-docker-best-practices.instructions.md` | Instruction | Docker best practices |
+| `dependency-license-checker` | Hook | Checks licenses |
+| `attester-import-check` | Hook | Checks imports |
+| `agent-supply-chain` | Skill | Supply chain analysis |
 
-## Références
+See `.github/copilot-instructions.md` for this repo's full active hooks list, and the [governance hooks registry](https://github.com/lowcodai/itshaker-copilot-governance/blob/main/docs/awesome-copilot-map.md) for the full ecosystem-wide catalog.
 
-- [itshaker-copilot-governance](https://github.com/itshaker/itshaker-copilot-governance)
+## References
+
+- [itshaker-copilot-governance](https://github.com/lowcodai/itshaker-copilot-governance)

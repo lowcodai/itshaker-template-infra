@@ -1,0 +1,17 @@
+name: Infrastructure Scan
+
+on:
+  pull_request:
+    paths:
+      - 'ansible/**'
+      - 'docker/**'
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run infrastructure scan
+        run: |
+          echo "Placeholder step — not yet a real enforced check."
+          echo "Configure a real infra scanner here, e.g. tfsec, checkov, or trivy."
