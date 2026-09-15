@@ -15,11 +15,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check for Dockerfile
+        id: dockerfile
+        run: |
+          if [ -f Dockerfile ] || find . -maxdepth 3 -iname 'Dockerfile*' -not -path './.git/*' | grep -q .; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Set up Docker Buildx
+        if: steps.dockerfile.outputs.found == 'true'
         uses: docker/setup-buildx-action@v3
       - name: Build image
+        if: steps.dockerfile.outputs.found == 'true'
         uses: docker/build-push-action@v6
         with:
           context: .
           push: false
           tags: ${{ github.repository }}:${{ github.sha }}
+      - name: No Dockerfile yet
+        if: steps.dockerfile.outputs.found == 'false'
+        run: echo "No Dockerfile found — nothing to build yet. Add one under docker/ or at the repo root to enable this check."
