@@ -30,4 +30,4 @@ This project covers: infrastructure-as-code, Ansible playbooks, Docker, monitori
 - `.github/instructions/devops-core-principles.instructions.md`
 
 ## References
-- Governance: https://github.com/lowcodai/itshaker-copilot-governance
+- Governance: https://github.com/lowcodai/vibecoding-copilot-governance

@@ -1,13 +1,13 @@
-# itshaker-template-infra
+# vibecoding-template-infra
 
 > Template for infrastructure, SRE, Ansible, Docker, monitoring, and CMDB projects.
 
-[![Governance](https://img.shields.io/badge/governance-lowcodai-blue)](https://github.com/lowcodai/itshaker-copilot-governance)
+[![Governance](https://img.shields.io/badge/governance-lowcodai-blue)](https://github.com/lowcodai/vibecoding-copilot-governance)
 
 ## Description
 
-GitHub template for itshaker infrastructure projects. Includes everything provided by
-`itshaker-template-base`, plus:
+GitHub template for vibecoding infrastructure projects. Includes everything provided by
+`vibecoding-template-base`, plus:
 - Ansible structure (`inventory/`, `playbooks/`, `roles/`)
 - Docker structure
 - Monitoring (dashboards, alerts)
@@ -17,7 +17,7 @@ GitHub template for itshaker infrastructure projects. Includes everything provid
 ## Usage
 
 ```bash
-cd itshaker-bootstrap
+cd vibecoding-bootstrap
 ./scripts/new-project.sh --type infra --name <my-infra>
 ```
 
@@ -53,8 +53,8 @@ cd itshaker-bootstrap
 | `attester-import-check` | Hook | Checks imports |
 | `agent-supply-chain` | Skill | Supply chain analysis |
 
-See `.github/copilot-instructions.md` for this repo's full active hooks list, and the [governance hooks registry](https://github.com/lowcodai/itshaker-copilot-governance/blob/main/docs/awesome-copilot-map.md) for the full ecosystem-wide catalog.
+See `.github/copilot-instructions.md` for this repo's full active hooks list, and the [governance hooks registry](https://github.com/lowcodai/vibecoding-copilot-governance/blob/main/docs/awesome-copilot-map.md) for the full ecosystem-wide catalog.
 
 ## References
 
-- [itshaker-copilot-governance](https://github.com/lowcodai/itshaker-copilot-governance)
+- [vibecoding-copilot-governance](https://github.com/lowcodai/vibecoding-copilot-governance)
